@@ -1,4 +1,4 @@
-@import 'http://fonts.googleapis.com/css?family=Lato:300,700|Source+Code+Pro';
+@import '//fonts.googleapis.com/css?family=Lato:300,700|Source+Code+Pro';
 *, *:before, *:after {
 	box-sizing: border-box;
 	color: #333;
@@ -9,6 +9,9 @@ body {
 	font-weight: 700;
 	text-align: center;
 	padding: 0 0 50px 0;
+}
+#logo {
+  max-width: 300px;
 }
 h1 {
 	font-weight: 300;
