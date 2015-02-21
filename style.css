@@ -1,4 +1,4 @@
-@import 'http://fonts.googleapis.com/css?family=Lato:300,700|Source+Code+Pro';
+@import '//fonts.googleapis.com/css?family=Lato:300,700|Source+Code+Pro';
 *, *:before, *:after {
 	box-sizing: border-box;
 	color: #333;
