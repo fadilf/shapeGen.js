@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Documentation</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type='text/javascript' src='shapeGen.js'></script>
+        <link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>shapeGen.js Documentation</h1>
+		<p>There are several kinds of shapes that can be made using shapeGen.js using a single line of HTML code. To create a shape, follow these steps:</p>
+		<p>Step 1: Include the scripts inside the &lt;head&gt; tags:</p>
+		<code>
+			&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+			<br>
+			&lt;script src="shapeGen.min.js"&gt;&lt;/script&gt;
+		</code>
+		<p>Step 2: Add this where you want the shape to appear:</p>
+		<code>
+			&lt;i shape="[shape]" color="[color]" size="[size]" [br]&gt;&lt;/i&gt;
+		</code>
+		<p>The available shapes are:</p>
+		<ul>
+			<a href="#oval"><li>Circle: oval</li></a>
+			<a href="#oval"><li>Oval: oval</li></a>
+			<a href="#rec"><li>Square: rec</li></a>
+			<a href="#rec"><li>Rectangle: rec</li></a>
+			<a href="#tri"><li>Triangle: tri</li></a>
+			<a href="#tra"><li>Trapezium: tra</li></a>
+		</ul>
+		<p>The following color formats are accepted:</p>
+		<ul>
+			<li>Hex codes: #abcdef</li>
+			<li>RBG/RGBA: rgb(123,123,123)</li>
+			<li>Plain text: green</li>
+			<li>Random color: random</li>
+			<li>If no color is specified, the default color is black</li>
+		</ul>
+		<p>The br in the <code id="in">&lt;i&gt;</code> tag is optional. By default, these shapes are inline-blocks. if the br is added, it makes the shape a block and puts it on a seperate line.</p>
+		<p>Example</p>
+		<code>
+			&lt;i shape="rec" color="random" size="200px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="rec" color="random" size="200px"></i>
+		<p id="oval">Circle and Oval:</p>
+		<p class="sub">For an oval, the size is specified in x-axis and y-axis, seperated by a comma. If there is no comma, the shape is a circle. For example:</p>
+		<code>
+			&lt;i shape="oval" color="random" size="200px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="oval" color="random" size="200px"></i>
+		<p class="sub">and</p>
+		<code>
+			&lt;i shape="oval" color="random" size="150px, 200px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="oval" color="random" size="150px, 200px"></i>
+		<p id="rec">Square and Rectangle:</p>
+		<p class="sub">Just like an oval, the size is specified in x-axis and y-axis, seperated by a comma. If there is no comma, the shape is a circle. For example:</p>
+		<code>
+			&lt;i shape="rec" color="random" size="200px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="rec" color="random" size="200px"></i>
+		<p class="sub">and</p>
+		<code>
+			&lt;i shape="rec" color="random" size="150px, 200px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="rec" color="random" size="150px, 200px"></i>
+		<p id="tri">Triangle:</p>
+		<p class="sub">For a triangle, the size specified is used as the height of the triangle. Triangles have an extra attribute to specify direction (n, s, e, w, ne, nw...). If no direction is specified, the triangle defaults to n.</p>
+		<code>
+			&lt;i shape="tri" color="random" size="200px" dir="n"&gt;&lt;/i&gt;
+		</code>
+		<i shape="tri" color="random" size="200px" dir="n"></i>
+		<p class="sub">Examples of the directions:</p>
+		<i shape="tri" color="random" size="50px" dir="n"></i>
+		<i shape="tri" color="random" size="50px" dir="e"></i>
+		<i shape="tri" color="random" size="50px" dir="s"></i>
+		<i shape="tri" color="random" size="50px" dir="w"></i>
+		<i shape="tri" color="random" size="50px" dir="ne"></i>
+		<i shape="tri" color="random" size="50px" dir="sw"></i>
+		<i shape="tri" color="random" size="50px" dir="se"></i>
+		<i shape="tri" color="random" size="50px" dir="nw"></i>
+		<p id="tra">Trapezium:</p>
+		<p class="sub">For a trapezium, the sizes specified are used as the top side, bottom side and the height, in that order.</p>
+		<code>
+			&lt;i shape="tra" color="random" size="200px, 300px, 100px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="tra" color="random" size="200px, 300px, 100px"></i>
+		<p class="sub">and</p>
+		<code>
+			&lt;i shape="tra" color="random" size="300px, 200px, 100px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="tra" color="random" size="300px, 200px, 100px"></i>
+		<p class="sub">Note: It is possible to create isosceles triangles by setting either the too or bottom to 0.</p>
+		<code>
+			&lt;i shape="tra" color="random" size="0px, 200px, 100px"&gt;&lt;/i&gt;
+		</code>
+		<i shape="tra" color="random" size="0px, 100px, 150px"></i>
+		<p>More shapes coming soon...</p>
+	</body>
+</html>
